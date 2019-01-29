@@ -36,6 +36,9 @@
  * DAMAGES OR  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+function scrollAdvancedSettings(){
+    setTimeout(function(){$("html,body").animate({scrollTop: document.body.scrollHeight},"slow")}, 100);
+}
 'use strict';
 
 angular.module('hopsWorksApp')
@@ -48,7 +51,7 @@ angular.module('hopsWorksApp')
             var self = this;
             self.connectedStatus = false;
             self.loading = false;
-            self.advanced = true;
+            self.advanced = false;
             self.details = true;
             self.loadingText = "";
             self.jupyterServer;

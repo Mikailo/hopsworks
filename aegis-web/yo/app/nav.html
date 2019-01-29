@@ -57,10 +57,6 @@
     </div>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
-          <li>
-              <i class="fas fa-envelope" aria-hidden="true" style="font-size: 25px; color: #fff; margin-top: 15px; margin-right: 10px;"></i>
-              <!-- <img alt="" src="https://gravatar.com/avatar/{{mainCtrl.emailHash}}?d=retro&s=50" style="height: 35px; margin-right: 10px;border: 0.5px solid gray;"> -->
-          </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" style="padding:7px 10px 8px 10px; text-decoration:none;"  aria-expanded="false" id="navbarProfile">
               <img alt="" src="https://gravatar.com/avatar/{{mainCtrl.emailHash}}?d=retro&s=50" style="height: 35px; margin-right: 10px;border: 0.5px solid gray;" class="profile-image img-circle">
@@ -69,7 +65,6 @@
             <ul class="dropdown-menu">
               <li ng-show="mainCtrl.isAdmin() === 'true'"><a ng-click="mainCtrl.goToAdminPage()"><i class="fa fa-tools"></i> Admin</a></li>
               <li><a ng-click="mainCtrl.profileModal()"><i class="fa fa-cog"></i> Account</a></li>
-              <li><a href="#!/walletTransactions"><i class="fa fa-suitcase"></i> Wallet Transactions</a></li>
               <!--<li><a ng-click="mainCtrl.sshKeysModal()"><i class="fa fa-key"></i> Ssh Keys</a></li>-->
               <li><a href="#!/" ng-click="mainCtrl.logout()"><i class="fa fa-sign-out-alt"></i> Sign out</a></li>
             </ul>
@@ -88,7 +83,7 @@
               <li class="dropdown-header text-muted" ng-if="!mainCtrl.messages.length"><h4>Inbox empty.</h4></li>
               <li ng-repeat="msg in mainCtrl.messages| limitTo:5">
                 <div>
-                  <div ng-click="mainCtrl.openMessageModal(msg)">
+                  <div ng-click="mainCtrl.openMessageModal(msg)">                    
                     <div class="message-subject text-muted">
                       <i ng-if="msg.unread" class="fa fa-circle pull-left" style="color:#f89406; margin-top: 4px;" title="Unread message"></i>
                       <i ng-if="!msg.unread" class="fa fa-circle pull-left" style="color:grey; margin-top: 4px;" title="Read message"></i>
@@ -102,17 +97,17 @@
               <a class="pull-right" ng-if="mainCtrl.messages.length" ng-click="mainCtrl.openMessageModal()" style="text-decoration:none;"> See all messages</a>
               <a class="pull-right" ng-if="!mainCtrl.messages.length" ng-click="mainCtrl.openMessageModal()" style="text-decoration:none;"> Goto messages</a>
             </ul>
-          </li>
+          </li>          
         </ul>
         <!--ng-show="showDatasets"-->
         <form class="navbar-form">
           <div class="col-xs-12 col-sm-4 col-md-4 input-group">
-            <input type="text" class="form-control dark" style="height: 44px; background-color: #ffffff; border: none; color: #fff; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"
+            <input type="text" class="form-control dark" style="height: 44px; background-color: #6baec6; border: none; color: #fff"
                    name="srch-term" id="srch-term" placeholder="Search for projects or datasets..." ng-model="mainCtrl.searchTerm" ng-model-options="{debounce: 500}"
                    ng-change="mainCtrl.keyTyped()" ng-keyup="mainCtrl.hitEnter($event)">
 
             <div class="input-group-btn" style="width: 54px;">
-              <button class="btn btn-default" style="color: #028e9b;padding: 6px 12px; height: 44px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"
+              <button class="btn btn-default" style="color: #028e9b;padding: 6px 12px; height: 44px"
                       ng-click="mainCtrl.search()" type="button">
                 <i class="fa fa-search"></i>
               </button>

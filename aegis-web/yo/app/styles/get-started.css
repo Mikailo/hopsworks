@@ -1,0 +1,37 @@
+.wiki-ToC{
+    position: fixed;
+    right: 30px;
+    top: 120px;
+    width: 20%;
+    border-left: 5px solid #0492b3;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.wiki-main{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.sidebar-header-2 { 
+    margin-left: 10px; 
+}
+.sidebar-header-3 { 
+    margin-left: 20px;
+ }
+.sidebar-header-4 { 
+    margin-left: 30px; 
+}
+.sidebar-header-5 { 
+    margin-left: 40px;
+}
+
+.nav-list {
+    font-size: 17px;
+}
+
+.nav-header {
+    font-size: 17px;
+    text-transform: none;
+    line-height: 30px;
+}
