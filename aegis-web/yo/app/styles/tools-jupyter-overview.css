@@ -1,23 +1,76 @@
 .content-wrapper{
     margin-top: 20px;
 }
-.tool-card{
-    width: 300px;
+.card-tool{
+    width: 25%;
+    min-width: 300px;
     padding: 0px;
     perspective: 1000px;
-    height:555px;
-    margin-left: 10%;
+    /* height:555px; */
+    margin-left: 5%;
     float: left;
 }
 
-.card-img-custom{
+.card-tool-image{
     object-fit: contain;
-    width: 280px;
-    height: 200px;
-    margin-left: 10px;
+    width: 100%;
+    height: 130px;
+    padding: 5% 5% 5% 5%;
 }
 
-.card-inner-custom{
+.card-tool-header{
+    width: 100%;
+    height: 15px;
+    background-color: #0492b3;
+}
+.card-tool-title{
+    color: #0492b3;
+    display: block;
+    padding: 0px 5px 0px 5px;
+    font-size: 140%;
+    text-align: center;
+    height: 30px;
+}
+
+.card-tool-text{
+    text-align: center;
+    color: grey;
+    padding: 5% 5% 5% 5%;
+    margin-bottom: 0px;
+
+}
+.card-body-bottom{
+    width:100%;
+    background-color: #f2f2f2;
+    padding: 5% 5% 5% 5%;
+}
+
+.card-tool-bottom-title{
+    color: #0492b3;
+    font-size: 120%;
+    width: 100%;
+    display: inline-block;
+}
+
+.card-tool-bottom-text{
+    margin-top: 5px;
+    color:grey;
+    width: 100%;
+    display: inline-block;
+}
+
+.card-tool-bottom-link{
+    font-size: 110%;
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.card-tool-bottom-link-morethan{
+    float:right;
+}
+/* .card-inner-custom{
     position: relative;
     width: 100%;
     height: 100%;
@@ -44,7 +97,7 @@
 .card-back-custom{
     background-color: white;
     transform: rotateY(180deg);
-}
+} */
 
 .info-icon{
     height: 30px;
@@ -57,13 +110,15 @@
     margin-top: 30px;
     width: 100%;
     float: left;
+    text-align: center;
 }
 
 #jupyter-settings-access{
     margin-left: 50px;
     /* margin-bottom: 5px;
     margin-top: 5px; */
-    
+    padding: 20px;
+    border: 3px solid #0492b3;
     color: #03677d;
     /* border: 1px solid #0492b3; */
     /* background-color: #e8eaed;
@@ -81,7 +136,6 @@
 
 
 .tab-jupyter-settings-btn{
-    margin-left: 40%;
     width: 240px;
     background-color: #1e961e;
     border: 3px solid #398439;
@@ -97,4 +151,21 @@
     cursor: pointer;
     background-color: white;
     color: #398439; 
+}
+
+.row-margin{
+    margin-left: -150px;
+}
+
+.jupyter-tools-sidebard-z-index{
+    z-index: -1;
+}
+@media only screen and (max-width :1364px){
+    .card-tool{
+        margin-top: 30px;
+    }
+
+    .jupyter-tools-wrapper-margin{
+        margin-top: -20px;
+    }
 }
