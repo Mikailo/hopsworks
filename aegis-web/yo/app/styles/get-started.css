@@ -25,6 +25,10 @@
     color: white;
 }
 
+.sidebar-selected:hover{
+    color: white;
+}
+
 .sidebar-header-0{
     margin-left: 5px;
     font-size: 110%;
