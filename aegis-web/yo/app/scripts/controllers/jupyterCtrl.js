@@ -36,9 +36,6 @@
  * DAMAGES OR  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-function scrollAdvancedSettings(){
-    setTimeout(function(){$("html,body").animate({scrollTop: document.body.scrollHeight},"slow")}, 100);
-}
 'use strict';
 
 angular.module('hopsWorksApp')
@@ -647,6 +644,10 @@ angular.module('hopsWorksApp')
             self.goBack = function() {
                 $window.history.back();
             };
+
+            $scope.scrollAdvancedSettings = function(){
+                setTimeout(function(){$("html,body").animate({scrollTop: document.body.scrollHeight},"slow")}, 100);
+            }
 
             self.stop = function() {
                 self.tourService.currentStep_TourEight = 0;
