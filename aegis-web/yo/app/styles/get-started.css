@@ -27,6 +27,12 @@
 
 .sidebar-selected:hover{
     color: white;
+    background-color:  #0492b3 !important;
+}
+
+.sidebar-selected:focus{
+    background-color:  #0492b3 !important;
+    color: white;
 }
 
 .sidebar-header-0{
